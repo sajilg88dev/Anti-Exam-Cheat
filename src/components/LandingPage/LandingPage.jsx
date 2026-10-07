@@ -174,14 +174,14 @@ export default function LandingPage({ onNavigateToMonitor }) {
         </div>
 
         <h1 className="hero__title">
-          Smart exam proctoring.<br />
-          <span className="hero__title-gradient">Simple, fast, and private.</span>
+          Real-Time Assessment<br />
+          <span className="hero__title-gradient">Integrity Monitoring</span>
         </h1>
 
         <p className="hero__subtitle">
-          ExamGuard monitors online exams directly in your browser using on-device AI.
-          Track gaze attention, detect multiple faces, and flag anomalies in real time —
-          with zero video ever sent to a server.
+          ExamGuard analyzes webcam input in real time to identify multiple faces, face absence,
+          and significant gaze or head-position changes. AI inference runs locally in the browser
+          without transmitting video to a remote server.
         </p>
 
         <div className="hero__actions">
