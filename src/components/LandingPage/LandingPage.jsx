@@ -60,7 +60,6 @@ const FEATURES = [
     desc: 'Instantly identifies unauthorized secondary individuals in frame or candidate absence. AI tethers directly to hardware frames, preventing collusion without sending video across the wire.',
     highlight: 'Instant Visual & Sound Flagging',
     span2: true,
-    dark: true,
   },
   {
     icon: <Icons.Eye />,
@@ -85,7 +84,6 @@ const FEATURES = [
     title: '100% On-Device WebAssembly Inference',
     desc: 'All computer vision calculations execute directly on candidate hardware via WebGL shaders and WebAssembly. Zero biometric imagery or video streams ever touch external servers.',
     highlight: 'Strict Privacy Compliance',
-    dark: true,
   },
   {
     icon: <Icons.ShieldCheck />,
@@ -262,7 +260,7 @@ export default function LandingPage({ onNavigateToMonitor }) {
         <div className="features-grid">
           {FEATURES.map((feature, i) => (
             <div
-              className={`feature-card ${feature.span2 ? 'feature-card--span2' : ''} ${feature.dark ? 'feature-card--dark' : ''}`}
+              className={`feature-card ${feature.span2 ? 'feature-card--span2' : ''}`}
               key={i}
             >
               <div className="feature-card__top">

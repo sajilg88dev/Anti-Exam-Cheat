@@ -348,50 +348,30 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 36px 32px;
-  background: #ffffff;
-  border: 1px solid var(--border-strong);
+  background: linear-gradient(145deg, #090d16 0%, #111827 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-xl);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
+  color: #ffffff;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 0, 0, 0.28);
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.38);
 }
 
 .feature-card--span2 {
   grid-column: span 2;
 }
 
-/* Dark Obsidian Card Variant */
+/* Dark Obsidian Card Variant (also default) */
 .feature-card--dark {
   background: linear-gradient(145deg, #090d16 0%, #111827 100%);
   border: 1px solid rgba(255, 255, 255, 0.14);
   color: #ffffff;
-  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
-}
-
-.feature-card--dark:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-}
-
-.feature-card--dark .feature-card__title {
-  color: #ffffff;
-}
-
-.feature-card--dark .feature-card__desc {
-  color: #cbd5e1;
-}
-
-.feature-card--dark .feature-card__highlight {
-  background: rgba(255, 255, 255, 0.08);
-  color: #f8fafc;
-  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .feature-card__top {
@@ -419,36 +399,36 @@
   border-radius: var(--radius-pill);
 }
 
-/* Badge Color Themes */
+/* Badge Color Themes (Luminous on Dark Surface) */
 .badge--blue {
-  background: rgba(0, 113, 227, 0.12);
-  color: #0071e3;
-  border: 1px solid rgba(0, 113, 227, 0.28);
+  background: rgba(0, 113, 227, 0.16);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.32);
 }
 .badge--purple {
-  background: rgba(99, 102, 241, 0.12);
-  color: #4f46e5;
-  border: 1px solid rgba(99, 102, 241, 0.28);
+  background: rgba(99, 102, 241, 0.16);
+  color: #a5b4fc;
+  border: 1px solid rgba(165, 180, 252, 0.32);
 }
 .badge--amber {
-  background: rgba(245, 158, 11, 0.12);
-  color: #b45309;
-  border: 1px solid rgba(245, 158, 11, 0.28);
+  background: rgba(245, 158, 11, 0.16);
+  color: #fcd34d;
+  border: 1px solid rgba(252, 211, 77, 0.32);
 }
 .badge--emerald {
-  background: rgba(16, 185, 129, 0.12);
-  color: #059669;
-  border: 1px solid rgba(16, 185, 129, 0.28);
+  background: rgba(16, 185, 129, 0.16);
+  color: #6ee7b7;
+  border: 1px solid rgba(110, 231, 183, 0.32);
 }
 .badge--cyan {
-  background: rgba(6, 182, 212, 0.12);
-  color: #0891b2;
-  border: 1px solid rgba(6, 182, 212, 0.28);
+  background: rgba(6, 182, 212, 0.16);
+  color: #67e8f9;
+  border: 1px solid rgba(103, 232, 249, 0.32);
 }
 .badge--rose {
-  background: rgba(244, 63, 94, 0.12);
-  color: #e11d48;
-  border: 1px solid rgba(244, 63, 94, 0.28);
+  background: rgba(244, 63, 94, 0.16);
+  color: #fda4af;
+  border: 1px solid rgba(253, 164, 175, 0.32);
 }
 
 .feature-card__content {
@@ -458,7 +438,7 @@
 .feature-card__title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: #09090b;
+  color: #ffffff;
   letter-spacing: -0.025em;
   margin-bottom: 12px;
   line-height: 1.35;
@@ -466,7 +446,7 @@
 
 .feature-card__desc {
   font-size: 0.94rem;
-  color: #334155;
+  color: #cbd5e1;
   line-height: 1.68;
 }
 
@@ -481,22 +461,23 @@
   gap: 8px;
   font-size: 0.78rem;
   font-weight: 650;
-  color: #0f172a;
-  background: #f1f5f9;
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .feature-card__pulse {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #0071e3;
+  background: #38bdf8;
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
 }
 
 /* ==========================================================================
-   How It Works (Steps)
+   How It Works (Steps — Dark Obsidian Cards)
    ========================================================================== */
 .steps-grid {
   display: grid;
@@ -506,17 +487,18 @@
 
 .step-card {
   padding: 34px 26px;
-  background: #ffffff;
-  border: 1px solid var(--border-strong);
+  background: linear-gradient(145deg, #090d16 0%, #111827 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #ffffff;
 }
 
 .step-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 0, 0, 0.24);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.3);
 }
 
 .step-card__header {
@@ -530,9 +512,9 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #090d16;
+  background: #0071e3;
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -540,32 +522,32 @@
   font-size: 0.95rem;
   letter-spacing: -0.5px;
   flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 113, 227, 0.4);
 }
 
 .step-card__line {
   flex: 1;
   height: 2px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.14);
   border-radius: 2px;
 }
 
 .step-card__title {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #09090b;
+  color: #ffffff;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
 }
 
 .step-card__desc {
   font-size: 0.88rem;
-  color: #475569;
+  color: #cbd5e1;
   line-height: 1.58;
 }
 
 /* ==========================================================================
-   Tech Stack Section
+   Tech Stack Section (Dark Obsidian Cards)
    ========================================================================== */
 .tech-grid {
   display: grid;
@@ -579,17 +561,18 @@
   align-items: center;
   text-align: center;
   padding: 34px 22px;
-  background: #ffffff;
-  border: 1px solid var(--border-strong);
+  background: linear-gradient(145deg, #090d16 0%, #111827 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #ffffff;
 }
 
 .tech-card:hover {
   transform: translateY(-3px);
   border-color: #0071e3;
-  box-shadow: 0 10px 30px rgba(0, 113, 227, 0.12);
+  box-shadow: 0 20px 48px rgba(0, 113, 227, 0.25);
 }
 
 .tech-card__icon-wrapper {
@@ -600,14 +583,14 @@
 .tech-card__name {
   font-size: 1.05rem;
   font-weight: 800;
-  color: #09090b;
+  color: #ffffff;
   letter-spacing: -0.015em;
   margin-bottom: 6px;
 }
 
 .tech-card__role {
   font-size: 0.82rem;
-  color: #475569;
+  color: #cbd5e1;
   line-height: 1.45;
 }
 
