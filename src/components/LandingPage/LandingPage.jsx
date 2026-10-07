@@ -144,10 +144,7 @@ export default function LandingPage({ onNavigateToMonitor }) {
       <nav className="landing-nav">
         <div className="landing-nav__brand">
           <Logo size={36} />
-          <div className="landing-nav__name-wrapper">
-            <span className="landing-nav__name">ExamGuard</span>
-            <span className="landing-nav__version">v2.4 Core</span>
-          </div>
+          <span className="landing-nav__name">ExamGuard</span>
         </div>
         <div className="landing-nav__links">
           <button className="landing-nav__link" onClick={() => scrollToSection('features')}>
