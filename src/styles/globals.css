@@ -194,11 +194,14 @@ html, body {
 /* --- Main Content --- */
 .app-main {
   display: grid;
-  grid-template-columns: 1fr 410px;
-  gap: 24px;
+  grid-template-columns: minmax(0, 640px) 390px;
+  justify-content: center;
+  align-items: start;
+  gap: 28px;
   padding: 24px 32px;
   overflow-y: auto;
   flex: 1;
+  width: 100%;
 }
 
 /* --- Side Panel --- */

@@ -12,6 +12,9 @@
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .webcam-panel__video-container {
