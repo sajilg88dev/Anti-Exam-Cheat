@@ -113,8 +113,8 @@ This project uses **MediaPipe Tasks Vision** because it offers a practical balan
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/harsshks/Edge-Proctor.git
-cd Edge-Proctor
+git clone 
+cd 
 
 # 2. Install dependencies
 npm install
@@ -209,17 +209,8 @@ MAX_FACES: 4            // Maximum faces tracked simultaneously
 - No analytics, no tracking, no cookies.
 - The MediaPipe model is loaded from Google's CDN once and cached in the browser.
 
----
 
-## 📄 License
-
-MIT © [Harsh Kumar](https://github.com/harsshks)
-
----
 
 <div align="center">
-
-Built as a **Frontend + Edge AI Engineering Assignment**  
-Powered by [Google MediaPipe](https://ai.google.dev/edge/mediapipe) · [React](https://react.dev) · [Vite](https://vitejs.dev)
 
 </div>
