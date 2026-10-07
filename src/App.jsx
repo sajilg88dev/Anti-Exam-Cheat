@@ -103,7 +103,7 @@ export default function App() {
       {/* Main Content */}
       <main className="app-main">
         {/* Left: Webcam */}
-        <div style={{ position: 'relative', width: '100%', maxWidth: 640, margin: '0 auto' }}>
+        <div style={{ position: 'relative', width: '100%', maxWidth: 800, margin: '0 auto' }}>
           {/* WebcamPanel is always mounted so videoRef is available when startCamera() runs */}
           <WebcamPanel
             videoRef={videoRef}

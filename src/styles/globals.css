@@ -194,10 +194,10 @@ html, body {
 /* --- Main Content --- */
 .app-main {
   display: grid;
-  grid-template-columns: minmax(0, 640px) 390px;
+  grid-template-columns: minmax(0, 800px) 380px;
   justify-content: center;
   align-items: start;
-  gap: 28px;
+  gap: 24px;
   padding: 24px 32px;
   overflow-y: auto;
   flex: 1;
