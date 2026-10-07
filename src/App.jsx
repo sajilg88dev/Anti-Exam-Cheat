@@ -8,6 +8,7 @@ import StatusPanel from './components/StatusPanel/StatusPanel';
 import AlertPanel from './components/AlertPanel/AlertPanel';
 import SessionSummary from './components/SessionSummary/SessionSummary';
 import EventLog from './components/EventLog/EventLog';
+import Logo from './components/Logo/Logo';
 import { MONITORING_STATUS, CAMERA_STATUS } from './utils/constants';
 
 export default function App() {
@@ -74,7 +75,7 @@ export default function App() {
           <button className="app-header__back" onClick={handleGoBack}>
             ← Exit to Home
           </button>
-          <div className="app-header__logo">EG</div>
+          <Logo size={34} />
           <div>
             <div className="app-header__title">ExamGuard</div>
             <div className="app-header__subtitle">Autonomous Integrity Console</div>

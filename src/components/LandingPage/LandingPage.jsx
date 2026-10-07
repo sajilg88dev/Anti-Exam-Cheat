@@ -1,3 +1,4 @@
+import Logo from '../Logo/Logo';
 import './LandingPage.css';
 
 // Crisp, Apple-style SVG icons for features
@@ -142,7 +143,7 @@ export default function LandingPage({ onNavigateToMonitor }) {
       {/* Navigation */}
       <nav className="landing-nav">
         <div className="landing-nav__brand">
-          <div className="landing-nav__logo">EG</div>
+          <Logo size={36} />
           <div className="landing-nav__name-wrapper">
             <span className="landing-nav__name">ExamGuard</span>
             <span className="landing-nav__version">v2.4 Core</span>
@@ -352,7 +353,7 @@ export default function LandingPage({ onNavigateToMonitor }) {
       <footer className="landing-footer">
         <div className="landing-footer__left">
           <div className="landing-footer__brand">
-            <div className="landing-footer__logo">EG</div>
+            <Logo size={26} />
             <span className="landing-footer__name">ExamGuard</span>
           </div>
           <p className="landing-footer__copy">
