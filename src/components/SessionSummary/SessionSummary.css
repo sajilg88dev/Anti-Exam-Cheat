@@ -1,6 +1,6 @@
 /* ==========================================================================
    ExamGuard — Session Summary Styles
-   Apple-Inspired Metric Tiles
+   High-Contrast Metric Tiles
    ========================================================================== */
 
 .session-summary {
@@ -8,32 +8,32 @@
   flex-direction: column;
   gap: 8px;
   background: #ffffff;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  padding: 18px 20px;
+  padding: 20px 22px;
   box-shadow: var(--shadow-sm);
 }
 
 .session-summary__title {
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 850;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #64748b;
-  margin: 0 0 6px 2px;
+  letter-spacing: 1.4px;
+  color: #09090b;
+  margin: 0 0 8px 2px;
 }
 
 .summary-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 10px;
 }
 
 .summary-card {
-  padding: 12px 14px;
-  background: #f8fafc;
+  padding: 13px 15px;
+  background: #f4f6fa;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -41,23 +41,23 @@
 }
 
 .summary-card:hover {
-  background: #f1f5f9;
-  border-color: rgba(0, 0, 0, 0.08);
+  background: #eef2f7;
+  border-color: rgba(0, 0, 0, 0.14);
 }
 
 .summary-card__label {
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 750;
   color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
 }
 
 .summary-card__value {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.02em;
+  font-size: 1.35rem;
+  font-weight: 850;
+  color: #09090b;
+  letter-spacing: -0.025em;
 }
 
 .summary-card__value--danger {

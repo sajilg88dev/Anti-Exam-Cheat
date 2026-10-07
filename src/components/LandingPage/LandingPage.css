@@ -1,18 +1,18 @@
 /* ==========================================================================
    ExamGuard — Landing Page Styles
-   Apple-Inspired Clean White Design
+   High-Contrast Apple Pro Design (Deep Obsidian & Elevated White Surfaces)
    ========================================================================== */
 
 .landing {
   min-height: 100vh;
   overflow-y: auto;
-  background: #ffffff;
+  background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-sans);
 }
 
 /* ==========================================================================
-   Navigation Bar (Apple Frosted Glass)
+   Navigation Bar (Frosted Glass with High Contrast)
    ========================================================================== */
 .landing-nav {
   display: flex;
@@ -22,11 +22,11 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid var(--border-strong);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
   transition: all 0.25s ease;
 }
 
@@ -36,21 +36,6 @@
   gap: 12px;
 }
 
-.landing-nav__logo {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, #0071e3 0%, #4338ca 100%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: -0.3px;
-  color: #ffffff;
-  box-shadow: 0 3px 10px rgba(0, 113, 227, 0.25);
-}
-
 .landing-nav__name-wrapper {
   display: flex;
   align-items: baseline;
@@ -58,20 +43,20 @@
 }
 
 .landing-nav__name {
-  font-size: 1.12rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #09090b;
 }
 
 .landing-nav__version {
-  font-size: 0.68rem;
-  font-weight: 600;
-  padding: 2px 7px;
-  background: rgba(0, 113, 227, 0.08);
-  color: #0071e3;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  background: #090d16;
+  color: #ffffff;
   border-radius: var(--radius-pill);
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
 }
 
 .landing-nav__links {
@@ -82,11 +67,11 @@
 
 .landing-nav__link {
   font-size: 0.88rem;
-  font-weight: 500;
-  color: #475569;
+  font-weight: 600;
+  color: #334155;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 0.15s ease;
   background: none;
   border: none;
   font-family: inherit;
@@ -98,9 +83,9 @@
 }
 
 .landing-nav__cta {
-  padding: 8px 20px;
-  font-size: 0.85rem;
-  box-shadow: 0 2px 10px rgba(0, 113, 227, 0.2);
+  padding: 9px 22px;
+  font-size: 0.86rem;
+  box-shadow: 0 3px 12px rgba(0, 113, 227, 0.3);
 }
 
 /* ==========================================================================
@@ -113,37 +98,38 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 90px 32px 70px;
+  padding: 96px 32px 76px;
   overflow: hidden;
-  background: radial-gradient(circle at 50% -20%, rgba(0, 113, 227, 0.07) 0%, rgba(99, 102, 241, 0.03) 45%, #ffffff 80%);
+  background: radial-gradient(circle at 50% -20%, rgba(9, 13, 22, 0.06) 0%, rgba(0, 113, 227, 0.07) 35%, #f4f6fa 75%);
 }
 
 .hero__glow {
   position: absolute;
-  top: -120px;
+  top: -140px;
   left: 50%;
   transform: translateX(-50%);
-  width: 900px;
-  height: 550px;
-  background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.08) 0%, rgba(99, 102, 241, 0.04) 40%, transparent 70%);
+  width: 950px;
+  height: 580px;
+  background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.1) 0%, rgba(99, 102, 241, 0.05) 45%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
+/* Deep Obsidian Contrast Eyebrow Badge */
 .hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  padding: 7px 18px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 113, 227, 0.2);
+  padding: 8px 20px;
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-pill);
   font-size: 0.82rem;
   font-weight: 600;
-  color: #0071e3;
+  color: #f8fafc;
   margin-bottom: 28px;
   z-index: 1;
-  box-shadow: 0 2px 12px rgba(0, 113, 227, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 .hero__badge-dot {
@@ -155,17 +141,17 @@
 }
 
 .hero__title {
-  font-size: 3.8rem;
-  font-weight: 800;
+  font-size: 3.9rem;
+  font-weight: 850;
   line-height: 1.12;
-  max-width: 860px;
+  max-width: 880px;
   z-index: 1;
-  letter-spacing: -0.035em;
-  color: #0f172a;
+  letter-spacing: -0.04em;
+  color: #000000;
 }
 
 .hero__title-gradient {
-  background: linear-gradient(135deg, #0071e3 0%, #4338ca 50%, #6366f1 100%);
+  background: linear-gradient(135deg, #0071e3 0%, #4338ca 50%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -173,12 +159,12 @@
 
 .hero__subtitle {
   font-size: 1.16rem;
-  color: #475569;
+  color: #334155;
   max-width: 680px;
-  margin-top: 22px;
+  margin-top: 24px;
   line-height: 1.68;
   z-index: 1;
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .hero__actions {
@@ -190,19 +176,25 @@
 }
 
 .hero__cta-primary {
-  padding: 13px 32px;
-  font-size: 0.95rem;
+  padding: 14px 34px;
+  font-size: 0.96rem;
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 18px rgba(0, 113, 227, 0.28);
+  box-shadow: 0 4px 20px rgba(0, 113, 227, 0.38);
 }
 
 .hero__cta-secondary {
-  padding: 13px 28px;
-  font-size: 0.95rem;
+  padding: 14px 30px;
+  font-size: 0.96rem;
   border-radius: var(--radius-pill);
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  color: #0f172a;
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.hero__cta-secondary:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
 }
 
 .hero__trust-strip {
@@ -218,15 +210,15 @@
 .trust-pill {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
+  gap: 8px;
+  padding: 7px 16px;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-pill);
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: #334155;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .trust-pill__check {
@@ -237,13 +229,15 @@
 }
 
 /* ==========================================================================
-   Stats Bar
+   Stats Bar — Dark Obsidian Contrast Section
    ========================================================================== */
 .stats-bar {
-  padding: 38px 32px;
-  background: #fbfbfd;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 46px 32px;
+  background: linear-gradient(135deg, #090d16 0%, #0f172a 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  box-shadow: inset 0 2px 14px rgba(0, 0, 0, 0.4);
 }
 
 .stats-container {
@@ -263,23 +257,26 @@
 }
 
 .stat-item__value {
-  font-size: 2.1rem;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.03em;
+  font-size: 2.3rem;
+  font-weight: 850;
+  letter-spacing: -0.035em;
   line-height: 1.15;
+  background: linear-gradient(135deg, #ffffff 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .stat-item__label {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #0071e3;
+  color: #38bdf8;
   letter-spacing: -0.01em;
 }
 
 .stat-item__subtext {
-  font-size: 0.72rem;
-  color: #64748b;
+  font-size: 0.74rem;
+  color: #94a3b8;
   margin-top: 2px;
 }
 
@@ -287,16 +284,16 @@
    Common Section Styles
    ========================================================================== */
 .section {
-  padding: 96px 36px;
+  padding: 100px 36px;
   max-width: 1180px;
   margin: 0 auto;
 }
 
 .section--tinted {
   max-width: 100%;
-  background: #f8fafc;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: #eef2f7;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
 }
 
 .section-inner {
@@ -310,19 +307,19 @@
 }
 
 .section__label {
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.8rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   color: #0071e3;
   margin-bottom: 12px;
 }
 
 .section__title {
-  font-size: 2.4rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: #0f172a;
+  font-size: 2.5rem;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  color: #09090b;
   line-height: 1.2;
 }
 
@@ -337,7 +334,7 @@
 }
 
 /* ==========================================================================
-   Apple-Inspired Bento Grid Features
+   Apple Bento Grid Features (Dark Obsidian & Elevated White Surfaces)
    ========================================================================== */
 .features-grid {
   display: grid;
@@ -350,36 +347,63 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 34px 30px;
+  padding: 36px 32px;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-xl);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 0, 0, 0.14);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.28);
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .feature-card--span2 {
   grid-column: span 2;
-  background: linear-gradient(135deg, #ffffff 0%, #fbfbfd 100%);
+}
+
+/* Dark Obsidian Card Variant */
+.feature-card--dark {
+  background: linear-gradient(145deg, #090d16 0%, #111827 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
+}
+
+.feature-card--dark:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.feature-card--dark .feature-card__title {
+  color: #ffffff;
+}
+
+.feature-card--dark .feature-card__desc {
+  color: #cbd5e1;
+}
+
+.feature-card--dark .feature-card__highlight {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .feature-card__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .feature-card__icon {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
@@ -387,63 +411,63 @@
 }
 
 .feature-card__tag {
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.74rem;
+  font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  padding: 5px 12px;
+  letter-spacing: 0.8px;
+  padding: 5px 14px;
   border-radius: var(--radius-pill);
 }
 
-/* Badge & Icon Color Themes */
+/* Badge Color Themes */
 .badge--blue {
-  background: rgba(0, 113, 227, 0.08);
+  background: rgba(0, 113, 227, 0.12);
   color: #0071e3;
-  border: 1px solid rgba(0, 113, 227, 0.18);
+  border: 1px solid rgba(0, 113, 227, 0.28);
 }
 .badge--purple {
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(99, 102, 241, 0.12);
   color: #4f46e5;
-  border: 1px solid rgba(99, 102, 241, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.28);
 }
 .badge--amber {
-  background: rgba(245, 158, 11, 0.08);
-  color: #d97706;
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.28);
 }
 .badge--emerald {
-  background: rgba(16, 185, 129, 0.08);
+  background: rgba(16, 185, 129, 0.12);
   color: #059669;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.28);
 }
 .badge--cyan {
-  background: rgba(6, 182, 212, 0.08);
+  background: rgba(6, 182, 212, 0.12);
   color: #0891b2;
-  border: 1px solid rgba(6, 182, 212, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.28);
 }
 .badge--rose {
-  background: rgba(244, 63, 94, 0.08);
+  background: rgba(244, 63, 94, 0.12);
   color: #e11d48;
-  border: 1px solid rgba(244, 63, 94, 0.2);
+  border: 1px solid rgba(244, 63, 94, 0.28);
 }
 
 .feature-card__content {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .feature-card__title {
-  font-size: 1.18rem;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.02em;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #09090b;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
   line-height: 1.35;
 }
 
 .feature-card__desc {
-  font-size: 0.92rem;
-  color: #475569;
-  line-height: 1.65;
+  font-size: 0.94rem;
+  color: #334155;
+  line-height: 1.68;
 }
 
 .feature-card__footer {
@@ -456,12 +480,12 @@
   align-items: center;
   gap: 8px;
   font-size: 0.78rem;
-  font-weight: 600;
-  color: #334155;
-  background: #f8fafc;
+  font-weight: 650;
+  color: #0f172a;
+  background: #f1f5f9;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .feature-card__pulse {
@@ -481,62 +505,63 @@
 }
 
 .step-card {
-  padding: 32px 24px;
+  padding: 34px 26px;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .step-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.24);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
 .step-card__header {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .step-card__number {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background: #0071e3;
+  background: #090d16;
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 850;
   font-size: 0.95rem;
   letter-spacing: -0.5px;
   flex-shrink: 0;
-  box-shadow: 0 3px 10px rgba(0, 113, 227, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .step-card__line {
   flex: 1;
   height: 2px;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
 
 .step-card__title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.015em;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #09090b;
+  letter-spacing: -0.02em;
   margin-bottom: 8px;
 }
 
 .step-card__desc {
-  font-size: 0.86rem;
-  color: #64748b;
-  line-height: 1.55;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.58;
 }
 
 /* ==========================================================================
@@ -553,102 +578,105 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 32px 20px;
+  padding: 34px 22px;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tech-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0, 113, 227, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.06);
+  transform: translateY(-3px);
+  border-color: #0071e3;
+  box-shadow: 0 10px 30px rgba(0, 113, 227, 0.12);
 }
 
 .tech-card__icon-wrapper {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 14px;
 }
 
 .tech-card__name {
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: -0.01em;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #09090b;
+  letter-spacing: -0.015em;
   margin-bottom: 6px;
 }
 
 .tech-card__role {
-  font-size: 0.8rem;
-  color: #64748b;
+  font-size: 0.82rem;
+  color: #475569;
   line-height: 1.45;
 }
 
 /* ==========================================================================
-   CTA Section
+   CTA Section — Deep Midnight Obsidian Card
    ========================================================================== */
 .cta-section {
-  padding: 40px 32px 90px;
-  max-width: 1080px;
+  padding: 40px 32px 100px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .cta-card {
   position: relative;
   text-align: center;
-  padding: 68px 48px;
-  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid rgba(0, 0, 0, 0.09);
+  padding: 72px 48px;
+  background: linear-gradient(140deg, #090d16 0%, #0f172a 50%, #1e1b4b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-xl);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  color: #ffffff;
   overflow: hidden;
 }
 
 .cta-card__badge {
   display: inline-block;
-  font-size: 0.76rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #0071e3;
-  padding: 5px 14px;
-  background: rgba(0, 113, 227, 0.08);
+  letter-spacing: 1.4px;
+  color: #60a5fa;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-pill);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .cta-card__title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: -0.03em;
-  margin-bottom: 14px;
+  font-size: 2.5rem;
+  font-weight: 850;
+  color: #ffffff;
+  letter-spacing: -0.035em;
+  margin-bottom: 16px;
 }
 
 .cta-card__desc {
-  font-size: 1.05rem;
-  color: #475569;
-  max-width: 580px;
-  margin: 0 auto 34px;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
 }
 
 .cta-card__button {
-  padding: 14px 36px;
-  font-size: 0.98rem;
+  padding: 15px 38px;
+  font-size: 1rem;
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 20px rgba(0, 113, 227, 0.3);
+  box-shadow: 0 4px 24px rgba(0, 113, 227, 0.45);
 }
 
 /* ==========================================================================
-   Footer
+   Footer — Deep Obsidian Palette
    ========================================================================== */
 .landing-footer {
-  padding: 38px 48px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
-  background: #ffffff;
+  padding: 42px 48px;
+  background: #090d16;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  color: #94a3b8;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -666,28 +694,15 @@
   gap: 10px;
 }
 
-.landing-footer__logo {
-  width: 26px;
-  height: 26px;
-  background: linear-gradient(135deg, #0071e3 0%, #4338ca 100%);
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
+.landing-footer__name {
+  font-size: 1rem;
   font-weight: 800;
   color: #ffffff;
 }
 
-.landing-footer__name {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-
 .landing-footer__copy {
-  font-size: 0.78rem;
-  color: #64748b;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
 .landing-footer__links {
@@ -696,15 +711,15 @@
 }
 
 .landing-footer__link {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #cbd5e1;
   cursor: pointer;
-  transition: color 0.15s;
+  transition: color 0.15s ease;
 }
 
 .landing-footer__link:hover {
-  color: #0071e3;
+  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -722,7 +737,7 @@
   .landing-nav { padding: 12px 20px; }
   .landing-nav__links { display: none; }
   .hero { padding: 60px 20px 48px; }
-  .hero__title { font-size: 2.2rem; }
+  .hero__title { font-size: 2.3rem; }
   .features-grid { grid-template-columns: 1fr; }
   .feature-card--span2 { grid-column: span 1; }
   .steps-grid { grid-template-columns: 1fr; }

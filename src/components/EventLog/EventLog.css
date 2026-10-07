@@ -1,6 +1,6 @@
 /* ==========================================================================
    ExamGuard — Event Log Styles
-   Apple-Console Forensic Timeline
+   High-Contrast Forensic Timeline
    ========================================================================== */
 
 .event-log {
@@ -8,19 +8,19 @@
   flex-direction: column;
   gap: 8px;
   background: #ffffff;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
-  padding: 18px 20px;
+  padding: 20px 22px;
   box-shadow: var(--shadow-sm);
 }
 
 .event-log__title {
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 850;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #64748b;
-  margin: 0 0 6px 2px;
+  letter-spacing: 1.4px;
+  color: #09090b;
+  margin: 0 0 8px 2px;
 }
 
 .event-log__list {
@@ -34,45 +34,45 @@
 
 .event-log__empty {
   padding: 18px 16px;
-  background: #f8fafc;
+  background: #f4f6fa;
   border-radius: var(--radius-sm);
-  border: 1px dashed rgba(0, 0, 0, 0.1);
-  font-size: 0.82rem;
+  border: 1px dashed rgba(0, 0, 0, 0.16);
+  font-size: 0.84rem;
   color: #64748b;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .event-log__item {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 8px 12px;
-  background: #f8fafc;
+  padding: 9px 14px;
+  background: #f4f6fa;
   border-radius: var(--radius-xs);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  font-size: 0.78rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.8rem;
   transition: all 0.15s ease;
   animation: fade-in 0.15s ease-out;
 }
 
 .event-log__item:hover {
-  background: #f1f5f9;
-  border-color: rgba(0, 0, 0, 0.08);
+  background: #eef2f7;
+  border-color: rgba(0, 0, 0, 0.14);
 }
 
 .event-log__time {
   font-family: var(--font-mono);
-  color: #64748b;
+  color: #09090b;
   white-space: nowrap;
-  font-size: 0.72rem;
-  font-weight: 500;
+  font-size: 0.74rem;
+  font-weight: 700;
   padding-top: 1px;
 }
 
 .event-log__dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 6px;
@@ -80,28 +80,28 @@
 
 .event-log__dot--info {
   background: #0071e3;
-  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.25);
 }
 
 .event-log__dot--warning {
   background: #f59e0b;
-  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.25);
 }
 
 .event-log__dot--alert {
   background: #ef4444;
-  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
 }
 
 .event-log__dot--error {
   background: #dc2626;
-  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.25);
 }
 
 .event-log__message {
-  color: #334155;
+  color: #1e293b;
   line-height: 1.45;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @keyframes fade-in {
