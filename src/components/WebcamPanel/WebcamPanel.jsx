@@ -47,10 +47,16 @@ export default function WebcamPanel({
         ctx.lineWidth = 2.5;
         ctx.strokeRect(box.x * w, box.y * h, box.width * w, box.height * h);
 
-        // Label
+        // Label — un-mirror text so it reads left-to-right despite CSS scaleX(-1) on canvas
+        ctx.save();
+        const textAnchorX = (box.x + box.width) * w - 4;
+        const textAnchorY = box.y * h > 20 ? box.y * h - 6 : box.y * h + 16;
+        ctx.translate(textAnchorX, textAnchorY);
+        ctx.scale(-1, 1);
         ctx.fillStyle = color;
         ctx.font = '600 12px -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif';
-        ctx.fillText(`Subject ${i + 1}`, box.x * w + 4, box.y * h - 6);
+        ctx.fillText(`Subject ${i + 1}`, 0, 0);
+        ctx.restore();
       });
     }
 
