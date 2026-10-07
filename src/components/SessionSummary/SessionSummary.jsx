@@ -12,7 +12,7 @@ export default function SessionSummary({
 
   return (
     <div className="session-summary">
-      <h3 className="session-summary__title">Session Summary</h3>
+      <h3 className="session-summary__title">Session Metrics</h3>
       <div className="summary-grid">
         <div className="summary-card">
           <span className="summary-card__label">Duration</span>

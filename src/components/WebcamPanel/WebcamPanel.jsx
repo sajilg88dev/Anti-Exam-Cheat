@@ -42,21 +42,21 @@ export default function WebcamPanel({
     // Draw bounding boxes for each detected face
     if (overlayData.boxes) {
       overlayData.boxes.forEach((box, i) => {
-        const color = overlayData.faceCount > 1 ? '#ef4444' : '#22c55e';
+        const color = overlayData.faceCount > 1 ? '#ef4444' : '#10b981';
         ctx.strokeStyle = color;
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2.5;
         ctx.strokeRect(box.x * w, box.y * h, box.width * w, box.height * h);
 
         // Label
         ctx.fillStyle = color;
-        ctx.font = '12px Inter, sans-serif';
-        ctx.fillText(`Face ${i + 1}`, box.x * w + 4, box.y * h - 6);
+        ctx.font = '600 12px -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif';
+        ctx.fillText(`Subject ${i + 1}`, box.x * w + 4, box.y * h - 6);
       });
     }
 
     // Draw key landmarks for primary face (small dots)
     if (overlayData.landmarks) {
-      ctx.fillStyle = 'rgba(99, 102, 241, 0.5)';
+      ctx.fillStyle = 'rgba(0, 113, 227, 0.65)';
       // Draw a subset of landmarks to keep it subtle (every 3rd)
       for (let i = 0; i < overlayData.landmarks.length; i += 3) {
         const lm = overlayData.landmarks[i];
@@ -74,8 +74,8 @@ export default function WebcamPanel({
 
       // Draw a short line from the nose indicating direction
       const lineLen = 50;
-      ctx.strokeStyle = overlayData.isLookingAway ? '#ef4444' : '#22c55e';
-      ctx.lineWidth = 2;
+      ctx.strokeStyle = overlayData.isLookingAway ? '#ef4444' : '#10b981';
+      ctx.lineWidth = 2.5;
       ctx.beginPath();
       ctx.moveTo(nose.x * w, nose.y * h);
       ctx.lineTo(nose.x * w + yaw * lineLen * 3, nose.y * h + pitch * lineLen * 3);
@@ -92,15 +92,15 @@ export default function WebcamPanel({
   } else if (isActive && faceStatus === FACE_STATUS.NO_FACE) {
     badge = { text: 'No Face Detected', className: 'webcam-panel__badge--warning' };
   } else if (isActive && gazeStatus === GAZE_STATUS.LOOKING_AWAY) {
-    badge = { text: 'Looking Away', className: 'webcam-panel__badge--warning' };
+    badge = { text: 'Attention Diverted', className: 'webcam-panel__badge--warning' };
   }
 
   // Placeholder content for when camera isn't ready
   const placeholderMessage = cameraStatus === CAMERA_STATUS.DENIED
-    ? { icon: '🚫', title: 'Camera Access Denied', desc: 'Please allow camera access in your browser settings and reload the page.' }
+    ? { icon: '🚫', title: 'Camera Access Denied', desc: 'Please grant camera access in browser site settings and refresh the session.' }
     : cameraStatus === CAMERA_STATUS.ERROR
-      ? { icon: '📷', title: 'Camera Unavailable', desc: 'Your browser does not support camera access or no camera was found.' }
-      : { icon: '📷', title: 'Camera Inactive', desc: 'Click "Start Monitoring" to activate the camera and begin the proctoring session.' };
+      ? { icon: '⚠️', title: 'Camera Unavailable', desc: 'No video input device was detected or camera stream failed to initialize.' }
+      : { icon: '📹', title: 'Camera Feed Inactive', desc: 'Click "Start Monitoring" above to initialize native camera hardware and AI vision.' };
 
   return (
     <div className="webcam-panel">

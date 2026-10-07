@@ -72,12 +72,12 @@ export default function App() {
       <header className="app-header">
         <div className="app-header__brand">
           <button className="app-header__back" onClick={handleGoBack}>
-            ← Back
+            ← Exit to Home
           </button>
-          <div className="app-header__logo">EP</div>
+          <div className="app-header__logo">EG</div>
           <div>
-            <div className="app-header__title">Edge Proctor</div>
-            <div className="app-header__subtitle">Monitoring Dashboard</div>
+            <div className="app-header__title">ExamGuard</div>
+            <div className="app-header__subtitle">Autonomous Integrity Console</div>
           </div>
         </div>
         <div className="app-header__controls">
@@ -93,7 +93,7 @@ export default function App() {
             </button>
           ) : (
             <button className="btn btn--danger" onClick={handleStop}>
-              ■ Stop
+              ■ End Session
             </button>
           )}
         </div>
@@ -124,8 +124,12 @@ export default function App() {
                 right: 0,
                 bottom: 0,
                 zIndex: 10,
-                background: 'rgba(9, 9, 11, 0.92)',
-                borderRadius: 16,
+                background: 'rgba(255, 255, 255, 0.92)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                borderRadius: 20,
+                border: '1px solid var(--border)',
+                boxShadow: 'var(--shadow-md)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -134,9 +138,9 @@ export default function App() {
               <div className="loading-overlay">
                 <div className="spinner" />
                 <div className="loading-overlay__text">
-                  Initializing MediaPipe models…<br />
-                  <span style={{ fontSize: '0.78rem', opacity: 0.6 }}>
-                    First load downloads the model (~5 MB). Subsequent loads use cache.
+                  Initializing Vision Engine…<br />
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: 400 }}>
+                    Compiling neural models locally (~5 MB). Zero biometric data leaves this device.
                   </span>
                 </div>
               </div>

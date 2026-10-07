@@ -1,7 +1,17 @@
+/* ==========================================================================
+   ExamGuard — Status Panel Styles
+   Apple-Inspired Grouped Telemetry Card
+   ========================================================================== */
+
 .status-panel {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
 }
 
 .status-panel__title {
@@ -9,37 +19,38 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  color: var(--text-muted);
-  margin: 0 0 8px 2px;
+  color: #64748b;
+  margin: 0 0 6px 2px;
 }
 
 .status-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 11px 16px;
-  background: var(--surface);
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  transition: border-color 0.15s;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease;
 }
 
 .status-row:hover {
-  border-color: var(--border-hover);
+  background: #f1f5f9;
+  border-color: rgba(0, 0, 0, 0.08);
 }
 
 .status-row__label {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: #475569;
 }
 
 .status-row__value {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
 
 .status-dot {
@@ -49,12 +60,37 @@
   flex-shrink: 0;
 }
 
-.status-dot--ok { background: var(--success); box-shadow: 0 0 8px rgba(34, 197, 94, 0.5); }
-.status-dot--warning { background: var(--warning); box-shadow: 0 0 8px rgba(245, 158, 11, 0.5); }
-.status-dot--alert { background: var(--danger); box-shadow: 0 0 8px rgba(239, 68, 68, 0.5); }
-.status-dot--neutral { background: var(--text-muted); opacity: 0.6; }
+.status-dot--ok {
+  background: var(--success);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
 
-.status-text--ok { color: var(--success); }
-.status-text--warning { color: var(--warning); }
-.status-text--alert { color: var(--danger); }
-.status-text--neutral { color: var(--text-muted); }
+.status-dot--warning {
+  background: var(--warning);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.status-dot--alert {
+  background: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.status-dot--neutral {
+  background: #94a3b8;
+}
+
+.status-text--ok {
+  color: #059669;
+}
+
+.status-text--warning {
+  color: #d97706;
+}
+
+.status-text--alert {
+  color: #dc2626;
+}
+
+.status-text--neutral {
+  color: #64748b;
+}

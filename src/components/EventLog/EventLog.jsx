@@ -4,7 +4,7 @@ import './EventLog.css';
 export default function EventLog({ events }) {
   return (
     <div className="event-log">
-      <h3 className="event-log__title">Event Log</h3>
+      <h3 className="event-log__title">Forensic Audit Log</h3>
       {events.length === 0 ? (
         <div className="event-log__empty">No events recorded yet</div>
       ) : (

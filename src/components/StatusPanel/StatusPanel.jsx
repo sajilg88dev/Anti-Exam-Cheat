@@ -118,7 +118,7 @@ export default function StatusPanel({
 
   return (
     <div className="status-panel">
-      <h3 className="status-panel__title">Monitoring Status</h3>
+      <h3 className="status-panel__title">System Telemetry</h3>
       <StatusRow label="Camera" value={cameraLabel} level={cameraLevel(cameraStatus)} />
       <StatusRow label="Models" value={modelsLabel} level={modelsLevel} />
       <StatusRow label="Faces" value={FACE_LABELS[faceStatus] || '—'} level={faceLevel(faceStatus)} />
